@@ -1,0 +1,74 @@
+{
+  "name": "KC Lamb",
+  "title": "Sales and Marketing Specialist",
+  "quote": "Fusing creativity with strategy to deliver digital experiences that drive business success.",
+  "experiences": [
+    {
+      "jobTitle": "Sales and Marketing Associate",
+      "jobCompany": "SupaPass",
+      "jobCompanyLink": "https://www.supapass.com",
+      "jobStart": "Jul 2022",
+      "jobEnd": "Jul 2023",
+      "jobDescription": "Achieved a remarkable 56% increase in email campaign open rates and a 2% rise in replies, along with a 15% boost in response rates through proactive lead follow-up and multichannel query management for a UK-based SaaS platform. Collaborated closely with the Head of Growth and CEO on strategic sales and marketing initiatives.",
+      "jobSkills": [
+        "Hubsport", "ClickUp", "Intercom", "Reply.io", "Google Analytics", "Canva Pro", "Figma"
+      ]
+    },
+    {
+      "jobTitle": "Partner Development Specialist",
+      "jobCompany": "Agoda",
+      "jobCompanyLink": "https://www.agoda.com",
+      "jobStart": "Apr 2022",
+      "jobEnd": "Jul 2022",
+      "jobDescription": "Accomplished a high velocity of 200+ outbound phone calls and product walkthroughs, closing 10 deals daily over the phone to properties in Manila & Cebu to participate in the 3D Tour Photoshoot Program.",
+      "jobSkills": [
+        "Hubspot", "Twilio", "Microsoft Office Suite 365"
+      ]
+    },
+    {
+      "jobTitle": "Brand & Marketing Associate",
+      "jobCompany": "Penbrothers",
+      "jobCompanyLink": "https://penbrothers.com",
+      "jobStart": "Oct 2021",
+      "jobEnd": "Apr 2022",
+      "jobDescription": "Spearheaded B2B marketing campaigns, increasing social media engagement by 1.5%. Conducted weekly market analysis, collaborated with Client Account Executives, and oversaw digital projects for a SaaS HR outsourcing platform.",
+      "jobSkills": [
+        "Zoho", "Google Workspace", "Hootsuite", "Facebook Ads Manager", "LinkedIn Ads Manager", "Mailchimp"
+      ]
+    },
+    {
+      "jobTitle": "Client Partner",
+      "jobCompany": "Penbrothers",
+      "jobCompanyLink": "https://penbrothers.com",
+      "jobStart": "Feb 2020",
+      "jobEnd": "Oct 2021",
+      "jobDescription": "Championed proactive lead generation efforts, contributing to $2.1M+ in profit by managing 40+ weekly leads across channels and conducting 20+ daily personalized outreaches. Doubled weekly closures from 3 to 6 through strategic sales optimizations, virtual demos, and targeted upselling, all streamlined via Zoho CRM.",
+      "jobSkills": [
+        "Zoho", "Google Workspace", "Hunter.io", "LinkedIn Sales Navigator", "Zoom"
+      ]
+    },
+    {
+      "jobTitle": "Local Committee VP for Incoming Global Talent",
+      "jobCompany": "AIESEC in the Philippines",
+      "jobCompanyLink": "https://aiesec.org",
+      "jobStart": "Feb 2019",
+      "jobEnd": "Feb 2020",
+      "jobDescription": "Led three teams to secure three partnerships, enabling end-to-end customer experiences and personalized intern placements for over three foreign candidates from 800+ applicants. Recognized nationally as the best entity for achieving 8.94% growth in applications, 3% increase in membership productivity, and 75% rise in international hires.",
+      "jobSkills": [
+        "Google Workspace", "Hubspot", "Trello", "Asana"
+      ]
+    },
+    {
+      "jobTitle": "Marketing Intern",
+      "jobCompany": "The Standard Hospitality Group",
+      "jobCompanyLink": "https://www.linkedin.com/company/standard-hospitality-group/",
+      "jobStart": "Jun 2019",
+      "jobEnd": "Aug 2019",
+      "jobDescription": "Analyzed reports and conducted lead analyses to optimize restaurant performance, while actively contributing to digital projects for multiple restaurants by developing and refining strategies. Additionally, crafted an Academic Thesis Marketing Plan for 'Yabu Kids,' targeting family diners at the Japanese Yabu Restaurant.",
+      "jobSkills": [
+        "Google Workspace", "Photoshop", "Illustrator", "Canva"
+      ]
+    }
+  ],
+  "projects": []
+}
