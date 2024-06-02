@@ -24,7 +24,7 @@ export default function ProjectSection() {
 function ProjectSectionItem() {
   return (
     <section>
-      <div className="grid grid-cols-[0.4fr_1fr] gap-8">
+      <div className="grid lg:grid-cols-[0.4fr_1fr] gap-8">
         <div className="relative h-[120px]">
           <Image
             src="/image.png"

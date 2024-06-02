@@ -34,8 +34,8 @@ function ExperienceSectionItem({ experience }) {
 
   return (
     <section>
-      <div className="grid grid-cols-[0.5fr_1fr]">
-        <p className="pt-1 text-xs font-semibold tracking-wide uppercase text-slate-700 dark:text-tropical_indigo/80">
+      <div className="grid lg:grid-cols-[0.5fr_1fr]">
+        <p className="pt-1 pb-2 text-xs font-semibold tracking-wide uppercase lg:pb-0 text-slate-700 dark:text-tropical_indigo/80">
           {jobStart} - {jobEnd}
         </p>
         <div>
