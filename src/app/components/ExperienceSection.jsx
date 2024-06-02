@@ -54,7 +54,7 @@ function ExperienceSectionItem({ experience }) {
           </p>
           <div className="flex gap-1.5 gap flex-wrap  mt-3">
             {jobSkills.map((skill, idx) => {
-              return <ExperienceSectionSkills name={skill} />;
+              return <ExperienceSectionSkills key={idx} name={skill} />;
             })}
           </div>
         </div>
