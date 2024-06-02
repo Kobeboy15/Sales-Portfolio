@@ -1,12 +1,7 @@
-import { promises as fs } from "fs";
-
-export default async function ExperienceSection() {
-  const file = await fs.readFile(process.cwd() + "/src/app/KC.json", "utf-8");
-  const { experiences } = JSON.parse(file);
-
+export default async function ExperienceSection({ experiences }) {
   return (
-    <section className="mb-16">
-      <h3 className="mb-8 text-lg font-bold uppercase text-primary">
+    <section id="experience" className="mb-16">
+      <h3 className="mb-8 text-lg tracking-widest uppercase text-primary dark:text-primary_dark">
         Experience
       </h3>
       <div className="grid gap-8">
@@ -14,9 +9,14 @@ export default async function ExperienceSection() {
           return <ExperienceSectionItem experience={item} key={index} />;
         })}
       </div>
-      <button className="mt-12 font-semibold text-primary">
+      <a
+        href="/KCLamb_Resume.pdf"
+        target="_blank"
+        className="flex items-center mt-12 font-semibold tracking-tight text-primary dark:text-primary_dark hover:text-indigo-800 dark:hover:text-indigo-300"
+      >
         View Full Resume
-      </button>
+        <i className="uil uil-arrow-right text-[24px] pt-0.5"></i>
+      </a>
     </section>
   );
 }
@@ -35,7 +35,7 @@ function ExperienceSectionItem({ experience }) {
   return (
     <section>
       <div className="grid grid-cols-[0.5fr_1fr]">
-        <p className="pt-1 text-xs font-semibold tracking-wide uppercase text-slate-700">
+        <p className="pt-1 text-xs font-semibold tracking-wide uppercase text-slate-700 dark:text-tropical_indigo/80">
           {jobStart} - {jobEnd}
         </p>
         <div>
@@ -44,12 +44,12 @@ function ExperienceSectionItem({ experience }) {
             target="_blank"
             className="transition-colors"
           >
-            <h4 className="flex items-center gap-1 text-base font-medium leading-tight transition origin-left text-primary hover:text-indigo-800">
+            <h4 className="text-base font-medium leading-tight transition origin-left text-primary dark:text-primary_dark hover:text-indigo-800 dark:hover:text-indigo-300">
               {jobTitle} - {jobCompany}{" "}
-              <i class="uil uil-arrow-up-right text-[18px]"></i>
+              <i className="uil uil-arrow-up-right"></i>
             </h4>
           </a>
-          <p className="mt-2 text-sm leading-normal text-justify text-slate-800">
+          <p className="mt-2 text-sm leading-normal text-justify text-slate-800 dark:text-tropical_indigo">
             {jobDescription}
           </p>
           <div className="flex gap-1.5 gap flex-wrap  mt-3">

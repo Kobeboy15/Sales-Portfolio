@@ -14,7 +14,9 @@ module.exports = {
       },
       colors: {
         "primary": "#6967C7",
-        "background": "#1C1C33"
+        "primary_dark": "#8988D3",
+        "background": "#0B0B1E",
+        "tropical_indigo": "#D4D4ED"
       }
     },
   },

@@ -70,5 +70,12 @@
       ]
     }
   ],
-  "projects": []
+  "projects": [
+    {
+      "projectTitle": "Something",
+      "projectDescription": "Something",
+      "projectImageLink": "Something",
+      "projectLink": "Something"
+    }
+  ]
 }
