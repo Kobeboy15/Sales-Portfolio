@@ -4,7 +4,7 @@ export default function AboutSection() {
       <h3 className="mb-8 text-lg tracking-widest uppercase text-primary dark:text-primary_dark">
         About
       </h3>
-      <p className="leading-7 text-justify text-slate-700 dark:text-tropical_indigo">
+      <p className="font-light leading-7 text-justify text-slate-700 dark:text-tropical_indigo/85">
         I’m a seasoned sales, marketing, and media professional based in
         Toronto, Canada, with over five years of experience in lead generation,
         B2B and B2C sales and marketing, videography, video editing, and

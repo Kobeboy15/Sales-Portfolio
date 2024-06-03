@@ -24,14 +24,13 @@ export default function ProjectSection() {
 function ProjectSectionItem() {
   return (
     <section>
-      <div className="grid lg:grid-cols-[0.4fr_1fr] gap-8">
-        <div className="relative h-[120px]">
-          <Image
+      <div className="grid grid-cols-1 lg:grid-cols-[0.4fr_1fr] gap-8">
+        <div className="relative">
+          <img
             src="/image.png"
-            fill
             loading="lazy"
             alt="Picture of the author"
-            style={{ objectFit: "cover" }}
+            className="object-cover"
           />
         </div>
         <div>

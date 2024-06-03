@@ -2,3 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* CSS Loader Styles below */
+/* HTML: <div class="loader"></div> */
+.loader {
+  height: 4px;
+  width: 70%;
+  --c:no-repeat linear-gradient(#6100ee 0 0);
+  background: var(--c),var(--c),#d7b8fc;
+  background-size: 60% 100%;
+  animation: l16 10s infinite;
+}
+@keyframes l16 {
+  0%   {background-position:-150% 0,-150% 0}
+  66%  {background-position: 250% 0,-150% 0}
+  100% {background-position: 250% 0, 250% 0}
+}
+
+.fadeOutAnimation {
+  opacity: 0;
+  animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

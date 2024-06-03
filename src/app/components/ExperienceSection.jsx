@@ -49,7 +49,7 @@ function ExperienceSectionItem({ experience }) {
               <i className="uil uil-arrow-up-right"></i>
             </h4>
           </a>
-          <p className="mt-2 text-sm leading-normal text-justify text-slate-800 dark:text-tropical_indigo">
+          <p className="mt-2 text-sm leading-normal text-justify text-slate-800 dark:text-tropical_indigo/70">
             {jobDescription}
           </p>
           <div className="flex gap-1.5 gap flex-wrap  mt-3">

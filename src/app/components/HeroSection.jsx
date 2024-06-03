@@ -11,25 +11,35 @@ export default function HeroSection({ name, title, quote }) {
   };
 
   useEffect(() => {
-    const aboutElem = document.getElementById("about");
-    const experienceElem = document.getElementById("experience");
-    const projectsElem = document.getElementById("projects");
+    const handleScroll = () => {
+      const sectionOffsets = menuItems.map((section) => {
+        const el = document.getElementById(section.toLocaleLowerCase());
+        return {
+          section,
+          offsetTop: el.offsetTop,
+          offsetHeight: el.offsetHeight,
+        };
+      });
 
-    const observer = new IntersectionObserver((entries) => {
-      console.log("OBSERVED", entries[0].target.id);
-      setCurrentSection(entries[0].target.id);
-    });
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-    if (!!aboutElem) observer.observe(aboutElem);
-    if (!!experienceElem) observer.observe(experienceElem);
-    if (!!projectsElem) observer.observe(projectsElem);
+      const current = sectionOffsets.find(
+        ({ offsetTop, offsetHeight }) =>
+          scrollPosition >= offsetTop &&
+          scrollPosition < offsetTop + offsetHeight
+      );
+
+      if (current) {
+        setCurrentSection(current.section.toLocaleLowerCase());
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      if (!!aboutElem) observer.unobserve(aboutElem);
-      if (!!experienceElem) observer.unobserve(experienceElem);
-      if (!!projectsElem) observer.unobserve(projectsElem);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [menuItems]);
 
   return (
     <header
@@ -44,15 +54,15 @@ export default function HeroSection({ name, title, quote }) {
           <p className="mt-1 text-xl font-semibold text-slate-800 dark:text-tropical_indigo ">
             {title}
           </p>
-          <p className="max-w-sm mt-4 text-base text-slate-800 dark:text-tropical_indigo">
+          <p className="max-w-sm mt-4 text-base font-light text-slate-800 dark:text-tropical_indigo/70">
             {quote}
           </p>
         </div>
-        {/* <ul className="hidden gap-5 py-20 text-xl lg:grid text-slate-800 dark:text-tropical_indigo">
+        <ul className="hidden gap-5 py-20 text-xl lg:grid text-slate-700 dark:text-tropical_indigo">
           {menuItems.map((item, index) => {
             return (
               <li
-                className={`border-b transition-colors ${
+                className={`border-b-[4px] leading-7 border-dotted transition-colors cursor-pointer hover:border-primary hover:dark:border-primary_dark ${
                   currentSection == item.toLocaleLowerCase()
                     ? "border-primary dark:border-primary_dark"
                     : "border-transparent"
@@ -64,7 +74,7 @@ export default function HeroSection({ name, title, quote }) {
               </li>
             );
           })}
-        </ul> */}
+        </ul>
       </div>
       <div className="flex gap-3 mt-4 text-[28px] text-slate-800 dark:text-tropical_indigo">
         <i className="uil uil-linkedin"></i>

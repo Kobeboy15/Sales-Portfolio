@@ -2,6 +2,7 @@ import AboutSection from "./components/AboutSection";
 import ExperienceSection from "./components/ExperienceSection";
 import FooterSection from "./components/FooterSection";
 import HeroSection from "./components/HeroSection";
+import LoadingScreen from "./components/LoadingScreen";
 import ProjectSection from "./components/ProjectSection";
 
 import { promises as fs } from "fs";
@@ -12,10 +13,11 @@ export default async function Home() {
 
   return (
     <main className="grid max-w-screen-xl grid-cols-1 px-8 py-12 mx-auto lg:py-0 lg:px-28 lg:grid-cols-[0.75fr_1fr]">
-      <div>
+      <LoadingScreen />
+      <div id="hero-content" className="hidden">
         <HeroSection name={name} title={title} quote={quote} />
       </div>
-      <div className="lg:py-28">
+      <div id="scroll-content" className="hidden lg:py-28">
         <AboutSection />
         <ExperienceSection experiences={experiences} />
         <ProjectSection />
