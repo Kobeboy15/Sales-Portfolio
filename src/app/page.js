@@ -9,7 +9,7 @@ import { promises as fs } from "fs";
 
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + "/src/app/KC.json", "utf-8");
-  const { name, title, quote, experiences } = JSON.parse(file);
+  const { name, title, quote, experiences, projects } = JSON.parse(file);
 
   return (
     <main className="grid max-w-screen-xl grid-cols-1 px-8 py-12 mx-auto lg:py-0 lg:px-28 lg:grid-cols-[0.75fr_1fr]">
@@ -20,7 +20,7 @@ export default async function Home() {
       <div id="scroll-content" className="hidden lg:py-28">
         <AboutSection />
         <ExperienceSection experiences={experiences} />
-        <ProjectSection />
+        <ProjectSection projects={projects}/>
         <FooterSection />
       </div>
     </main>

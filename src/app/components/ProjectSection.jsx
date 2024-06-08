@@ -1,51 +1,66 @@
-import Image from "next/image";
-
-export default function ProjectSection() {
-  const projectItems = ["hello", "hello2", "owd", "4"];
-
+export default function ProjectSection({ projects }) {
+  const portfolioLink =
+    "https://www.canva.com/design/DAF_rh_SLzY/9mqiY8bvmZmjDT4ym1VSkw/view?utm_content=DAF_rh_SLzY&utm_campaign=designshare&utm_medium=link&utm_source=viewer";
   return (
     <section id="projects" className="mb-16">
       <h3 className="mb-8 text-lg tracking-widest uppercase text-primary dark:text-primary_dark">
         Projects
       </h3>
       <div className="grid gap-8">
-        {projectItems.map((item, index) => {
-          return <ProjectSectionItem key={index} />;
-        })}
+        {projects
+          .sort((a, b) => b - a)
+          .map((item, index) => {
+            return <ProjectSectionItem project={item} key={index} />;
+          })}
       </div>
-      <button className="flex items-center mt-12 font-semibold tracking-tight text-primary dark:text-primary_dark hover:text-indigo-800 dark:hover:text-indigo-300">
-        View Project Portfolio
+      <a
+        href={portfolioLink}
+        target="_blank"
+        className="flex items-center mt-12 font-semibold tracking-tight text-primary dark:text-primary_dark hover:text-indigo-800 dark:hover:text-indigo-300"
+      >
+        View Full Project Portfolio
         <i className="uil uil-arrow-right text-[24px] pt-0.5"></i>
-      </button>
+      </a>
     </section>
   );
 }
 
-function ProjectSectionItem() {
+function ProjectSectionItem({ project }) {
+  const { projectTitle, projectDescription, projectTags, isFeatured, images } =
+    project;
   return (
     <section>
-      <div className="grid grid-cols-1 lg:grid-cols-[0.4fr_1fr] gap-8">
-        <div className="relative">
-          <img
-            src="/image.png"
-            loading="lazy"
-            alt="Picture of the author"
-            className="object-cover"
-          />
+      <div className="grid grid-cols-1 gap-3">
+        <div className="relative flex gap-2 pt-3">
+          {images.map((url, index) => {
+            return (
+              <a key={'images'+index} href={`images/${url}`} target="_blank">
+                <img
+                  src={`images/${url}`}
+                  loading="lazy"
+                  alt={`${projectTitle}-${index}`}
+                  className="object-cover w-[120px] h-[120px] rounded-sm border transition-colors duration-200 border-slate-800/20 hover:cursor-pointer hover:border-primary dark:border-white/10 hover:dark:border-white/80"
+                />
+              </a>
+            );
+          })}
         </div>
         <div>
-          <h4 className="text-base font-medium leading-tight text-primary dark:text-primary_dark">
-            Senior Frontend Engineer, Accessibility
+          {isFeatured && (
+            <small className="text-primary dark:text-primary_dark">
+              Featured Project
+            </small>
+          )}
+          <h4 className="text-lg font-medium leading-tight text-primary dark:text-primary_dark">
+            {projectTitle}
           </h4>
-          <p className="mt-2 text-sm text-slate-800 dark:text-tropical_indigo">
-            Build and maintain critical components used to construct Klaviyo’s
-            frontend, across the whole product. Work closely with
-            cross-functional teams, including developers, designers, and product
-            managers, to implement and advocate for best practices in web
-            accessibility.
+          <p className="mt-2 text-sm leading-normal text-justify text-slate-800 dark:text-tropical_indigo">
+            {projectDescription}
           </p>
           <div className="flex gap-1.5 gap flex-wrap  mt-3">
-            <ProjectSectionSkill name={"Javascript"} />
+            {projectTags.map((tag, index) => {
+              return <ProjectSectionSkill key={index} name={tag} />;
+            })}
           </div>
         </div>
       </div>

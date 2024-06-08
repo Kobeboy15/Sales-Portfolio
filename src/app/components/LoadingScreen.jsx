@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
+  const [zLayerSet, setZLayerSet] = useState(false);
 
   useEffect(() => {
     // handles the display of the content //
@@ -23,9 +24,20 @@ export default function LoadingScreen() {
     scrollContent.style.display = "block";
   }, []);
 
+  // To delay the effect of the -z-10 class to allow for smooth FadeIn animation //
+  useEffect(() => {
+    if (!isLoading) {
+      setTimeout(() => {
+        setZLayerSet(true);
+      }, 800);
+    }
+  }, [isLoading]);
+
   return (
     <div
-      className={`absolute top-0 left-0 z-30 w-full h-screen dark:bg-background bg-white ${
+      className={`absolute top-0 left-0 ${
+        !zLayerSet ? "z-30" : "-z-10"
+      } w-full h-screen dark:bg-background bg-white ${
         isLoading ? "block" : "fadeOutAnimation"
       }`}
     >

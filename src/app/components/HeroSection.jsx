@@ -1,6 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+const linkedInLink = 'https://www.linkedin.com/in/kclamb/';
+const mediumLink = 'https://medium.com/@kc.lamb102';
+const emailLink = 'kc.lamb102@gmail.com';
+
 export default function HeroSection({ name, title, quote }) {
   const [currentSection, setCurrentSection] = useState("about");
   const menuItems = ["About", "Experience", "Projects"];
@@ -58,7 +62,7 @@ export default function HeroSection({ name, title, quote }) {
             {quote}
           </p>
         </div>
-        <ul className="hidden gap-5 py-20 text-xl lg:grid text-slate-700 dark:text-tropical_indigo">
+        <ul className="z-50 hidden gap-5 py-20 text-xl lg:grid text-slate-700 dark:text-tropical_indigo">
           {menuItems.map((item, index) => {
             return (
               <li
@@ -77,9 +81,15 @@ export default function HeroSection({ name, title, quote }) {
         </ul>
       </div>
       <div className="flex gap-3 mt-4 text-[28px] text-slate-800 dark:text-tropical_indigo">
-        <i className="uil uil-linkedin"></i>
-        <i className="uil uil-medium-m"></i>
+        <a href={linkedInLink} target="_blank">
+          <i className="uil uil-linkedin"></i>
+        </a>
+        <a href={mediumLink} target="_blank">
+          <i className="uil uil-medium-m"></i>
+        </a>
+        <a href={`mailto:${emailLink}`}>
         <i className="uil uil-envelope"></i>
+        </a>
       </div>
     </header>
   );

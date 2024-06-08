@@ -72,10 +72,31 @@
   ],
   "projects": [
     {
-      "projectTitle": "Something",
-      "projectDescription": "Something",
+      "projectTitle": "SupaPass",
+      "projectDescription": "Worked as a Sales and Marketing Associate, managing overall leads management, working closely with the Head of Growth & CEO for sales & marketing initiatives including email campaigns and other campaigns.",
       "projectImageLink": "Something",
-      "projectLink": "Something"
+      "projectLink": "Something",
+      "projectTags": ["Marketing", "Customer Support"],
+      "isFeatured": true,
+      "images": ["9.png", "10.png", "11.png", "12.png"]
+    },
+    {
+      "projectTitle": "Penbrothers",
+      "projectDescription": "Collaborated for over 2 years as a Client Partner and Brand & Marketing Associate, focusing on building sales pipelines through strategic outbound & lead generation and enhancing overall branding & social media presence.",
+      "projectImageLink": "Something",
+      "projectLink": "Something",
+      "projectTags": ["Marketing", "Design", "Social Media", "Canva"],
+      "isFeatured": true,
+      "images": ["5.png", "6.png", "7.png", "8.png"]
+    },
+    {
+      "projectTitle": "Standard Hospitality Group",
+      "projectDescription": "During a 3-month marketing internship required for academic purposes, I actively engaged in restaurant photo shoots and conducted comprehensive market research, including industry and competitor analyses for various brands. I developed an Academic Thesis Marketing Plan focusing on 'Yabu Kids', aimed at attracting family diners to Yabu Restaurant.",
+      "projectImageLink": "Something",
+      "projectLink": "Something",
+      "projectTags": ["Marketing", "Sales", "Canva"],
+      "isFeatured": true,
+      "images": ["1.png", "2.png", "3.png", "4.png"]
     }
   ]
 }
