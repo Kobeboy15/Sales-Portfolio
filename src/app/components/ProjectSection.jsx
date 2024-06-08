@@ -26,13 +26,13 @@ export default function ProjectSection({ projects }) {
 }
 
 function ProjectSectionItem({ project }) {
-  const { projectTitle, projectDescription, projectTags, isFeatured, images } =
+  const { projectTitle, projectDescription, projectTags, isFeatured, images, projectVideo } =
     project;
   return (
     <section>
       <div className="grid grid-cols-1 gap-3">
         <div className="relative flex gap-2 pt-3">
-          {images.map((url, index) => {
+          {images?.map((url, index) => {
             return (
               <a key={'images'+index} href={`images/${url}`} target="_blank">
                 <img
@@ -44,6 +44,9 @@ function ProjectSectionItem({ project }) {
               </a>
             );
           })}
+          {projectVideo && (
+            <iframe width="560" height="315" src={projectVideo} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          )}
         </div>
         <div>
           {isFeatured && (
@@ -54,11 +57,11 @@ function ProjectSectionItem({ project }) {
           <h4 className="text-lg font-medium leading-tight text-primary dark:text-primary_dark">
             {projectTitle}
           </h4>
-          <p className="mt-2 text-sm leading-normal text-justify text-slate-800 dark:text-tropical_indigo">
+          <p className="mt-2 text-sm leading-6 text-justify text-slate-800 dark:text-tropical_indigo/70">
             {projectDescription}
           </p>
           <div className="flex gap-1.5 gap flex-wrap  mt-3">
-            {projectTags.map((tag, index) => {
+            {projectTags?.map((tag, index) => {
               return <ProjectSectionSkill key={index} name={tag} />;
             })}
           </div>

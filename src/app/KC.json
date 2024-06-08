@@ -97,6 +97,24 @@
       "projectTags": ["Marketing", "Sales", "Canva"],
       "isFeatured": true,
       "images": ["1.png", "2.png", "3.png", "4.png"]
+    },
+    {
+      "projectTitle": "Dramatic Interview",
+      "projectDescription": "A dramatic interview with a musician, using strategic production lighting to create a visually striking and emotionally resonant atmosphere.",
+      "projectVideo": "https://www.youtube.com/embed/zm1JIN-3SWU?si=cJjbZQBMps61gDea",
+      "projectTags": ["Broadcasting", "Videography", "Film", "Writing", "Editing"]
+    },
+    {
+      "projectTitle": "Morning Routine",
+      "projectDescription": "Step into the enchanting world of a baker's morning routine, bathed in the artful glow of production lights. As the day begins, witness the meticulous dance of flour and dough, illuminated with a cinematic touch. This captivating portrayal not only showcases the baker's craft but also invites you to savor the essence of dawn in the bustling warmth of the bakery.",
+      "projectVideo": "https://www.youtube.com/embed/Oz0fVIHZ9ww?si=0n_jGdzw7_7JoFAQ",
+      "projectTags": ["Broadcasting", "Videography", "Film", "Writing", "Editing"]
+    },
+    {
+      "projectTitle": "8 Shot Bio",
+      "projectDescription": "Crafted a dynamic narrative using eight diverse shot types to delve into the intricacies of an individual's biography.",
+      "projectVideo": "https://www.youtube.com/embed/KAurgyPaiZc?si=MK-oHzqLkFMyZdSc",
+      "projectTags": ["Broadcasting", "Videography", "Film", "Writing", "Editing"]
     }
   ]
 }
