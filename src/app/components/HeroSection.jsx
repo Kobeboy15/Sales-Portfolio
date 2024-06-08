@@ -1,13 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 
-const linkedInLink = 'https://www.linkedin.com/in/kclamb/';
-const mediumLink = 'https://medium.com/@kc.lamb102';
-const emailLink = 'kc.lamb102@gmail.com';
+const linkedInLink = "https://www.linkedin.com/in/kclamb/";
+const mediumLink = "https://medium.com/@kc.lamb102";
+const emailLink = "kc.lamb102@gmail.com";
 
 export default function HeroSection({ name, title, quote }) {
   const [currentSection, setCurrentSection] = useState("about");
-  const menuItems = ["About", "Experience", "Projects"];
+  const menuItems = useMemo(() => ["About", "Experience", "Projects"], []);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -88,7 +88,7 @@ export default function HeroSection({ name, title, quote }) {
           <i className="uil uil-medium-m"></i>
         </a>
         <a href={`mailto:${emailLink}`}>
-        <i className="uil uil-envelope"></i>
+          <i className="uil uil-envelope"></i>
         </a>
       </div>
     </header>
