@@ -8,8 +8,6 @@ export default function LoadingScreen() {
 
   useEffect(() => {
     // handles the display of the content //
-    const heroContent = document.getElementById("hero-content");
-    const scrollContent = document.getElementById("scroll-content");
     if (localStorage.getItem("hasVisited")) {
       setIsLoading(false);
     } else {
@@ -19,16 +17,18 @@ export default function LoadingScreen() {
         setIsLoading(false);
       }, 3500);
     }
-    document.body.style.overflow = "auto";
-    heroContent.style.display = "flex";
-    scrollContent.style.display = "block";
   }, []);
 
   // To delay the effect of the -z-10 class to allow for smooth FadeIn animation //
   useEffect(() => {
+    const heroContent = document.getElementById("hero-content");
+    const scrollContent = document.getElementById("scroll-content");
     if (!isLoading) {
+      heroContent.style.display = "flex";
+      scrollContent.style.display = "block";
       setTimeout(() => {
         setZLayerSet(true);
+        document.body.style.overflow = "auto";
       }, 800);
     }
   }, [isLoading]);

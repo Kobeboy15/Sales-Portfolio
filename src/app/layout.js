@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className="dark:bg-background selection:bg-primary/30 selection: dark:selection:bg-primary_dark selection:text-slate-900"
+      className="dark:bg-background selection:bg-primary/30 dark:selection:bg-primary_dark selection:text-slate-900"
     >
       <head>
         <link
