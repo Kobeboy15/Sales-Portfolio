@@ -5,6 +5,8 @@ import HeroSection from "./components/HeroSection";
 import LoadingScreen from "./components/LoadingScreen";
 import ProjectSection from "./components/ProjectSection";
 
+import EasterEgg from "./components/EasterEgg";
+
 import { promises as fs } from "fs";
 
 export default async function Home() {
@@ -22,6 +24,7 @@ export default async function Home() {
         <ExperienceSection experiences={experiences} />
         <ProjectSection projects={projects}/>
         <FooterSection />
+        <EasterEgg />
       </div>
     </main>
   );
