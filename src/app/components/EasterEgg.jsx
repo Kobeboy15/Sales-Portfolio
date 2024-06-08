@@ -31,9 +31,7 @@ export default function KeySequenceListener() {
   }, []);
 
   const onSequenceDetected = () => {
-    window.location.replace(
-      'https://www.kobemichael.works/'
-    )
+    window.open('https://www.kobemichael.works/', '_blank').focus()
   };
 
   return (
