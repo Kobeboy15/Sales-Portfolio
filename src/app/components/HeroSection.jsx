@@ -5,7 +5,7 @@ const linkedInLink = "https://www.linkedin.com/in/kclamb/";
 const mediumLink = "https://medium.com/@kc.lamb102";
 const emailLink = "kc.lamb102@gmail.com";
 
-export default function HeroSection({ name, title, quote }) {
+export default function HeroSection({ name, title, quote, currentStatus }) {
   const [currentSection, setCurrentSection] = useState("about");
   const menuItems = useMemo(() => ["About", "Experience", "Projects"], []);
 
@@ -60,6 +60,9 @@ export default function HeroSection({ name, title, quote }) {
           </p>
           <p className="max-w-sm mt-4 text-base font-light text-slate-800 dark:text-tropical_indigo/70">
             {quote}
+          </p>
+          <p className="max-w-sm mt-4 text-md font-light text-slate-800 dark:text-tropical_indigo/70">
+            {currentStatus}
           </p>
         </div>
         <ul className="z-50 hidden gap-5 py-20 text-xl lg:grid text-slate-700 dark:text-tropical_indigo">

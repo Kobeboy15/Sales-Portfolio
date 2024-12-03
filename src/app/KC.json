@@ -1,7 +1,8 @@
 {
   "name": "KC Lamb",
-  "title": "Sales and Marketing Specialist",
+  "title": "Sales, Marketing, & Creative Specialist",
   "quote": "Fusing creativity with strategy to deliver digital experiences that drive business success.",
+  "currentStatus": "Currently pursuing postgraduate studies in Film & Media Production at Seneca College.",
   "experiences": [
     {
       "jobTitle": "Sales and Marketing Associate",
@@ -72,12 +73,32 @@
   ],
   "projects": [
     {
+      "projectTitle": "Conversation Short Film: Job Interview",
+      "projectDescription": "Co-edited and co-shot with Phillip Kim",
+      "projectVideo": "https://www.youtube.com/embed/gsbDztEQ0WU?si=h6hhFzuRDb7cfwuF",
+      "projectTags": ["Broadcasting", "Videography", "Film", "Writing", "Editing"],
+      "isFeatured": true
+    },
+    {
+      "projectTitle": "Music Video: Male Validation by Petite",
+      "projectDescription": "Co-edited and co-shot with Sandra Ezekwesili",
+      "projectVideo": "https://www.youtube.com/embed/-IE4gmOHww8?si=Bojuzece-gp1j-UE",
+      "projectTags": ["Broadcasting", "Videography", "Film", "Writing", "Editing"],
+      "isFeatured": true
+    },
+    {
+      "projectTitle": "Northern Lights: After Effects Scene",
+      "projectDescription": "This After Effects project uses 2D assets arranged in 3D space to create a parallax effect. A simulated camera pans across the scene, enhanced with animated rain, lightning, and dynamic lighting keyframes for a realistic, immersive atmosphere.",
+      "projectVideo": "https://www.youtube.com/embed/4eJHTPEAbZk?si=AtySppAfKxGE2g-x",
+      "projectTags": ["Broadcasting", "Videography", "Film", "Editing", "After Effects"],
+      "isFeatured": true
+    },
+    {
       "projectTitle": "SupaPass",
       "projectDescription": "Worked as a Sales and Marketing Associate, managing overall leads management, working closely with the Head of Growth & CEO for sales & marketing initiatives including email campaigns and other campaigns.",
       "projectImageLink": "Something",
       "projectLink": "Something",
       "projectTags": ["Marketing", "Customer Support"],
-      "isFeatured": true,
       "images": ["9.png", "10.png", "11.png", "12.png"]
     },
     {
@@ -86,7 +107,6 @@
       "projectImageLink": "Something",
       "projectLink": "Something",
       "projectTags": ["Marketing", "Design", "Social Media", "Canva"],
-      "isFeatured": true,
       "images": ["5.png", "6.png", "7.png", "8.png"]
     },
     {
@@ -95,7 +115,6 @@
       "projectImageLink": "Something",
       "projectLink": "Something",
       "projectTags": ["Marketing", "Sales", "Canva"],
-      "isFeatured": true,
       "images": ["1.png", "2.png", "3.png", "4.png"]
     },
     {
